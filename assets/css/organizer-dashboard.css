@@ -1,0 +1,628 @@
+/* === PANEL GENEL === */
+.dashboard-wrapper {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 60px auto;
+  padding: 40px;
+  background: linear-gradient(135deg, #f5e9ff, #e7f0ff);
+  border-radius: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* === SOL MENÜ === */
+.dashboard-sidebar {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  height: fit-content;
+  align-self: start;
+}
+
+.dashboard-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dashboard-menu li {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 14px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+  color: #333;
+}
+
+.dashboard-menu li:hover,
+.dashboard-menu li.active {
+  background: linear-gradient(90deg, #cb6ce6, #004aad);
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-menu .logout-item a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.dashboard-menu .logout-item:hover a {
+  color: #fff;
+}
+
+/* === SAĞ İÇERİK === */
+.dashboard-content {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* === PROFİL KARTI === */
+.profile-card {
+  text-align: center;
+}
+
+.profile-card .avatar img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card h2 {
+  color: #111;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.profile-card .email {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.info-box {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-box h3 {
+  font-size: 16px;
+  color: #004aad;
+  margin-bottom: 8px;
+}
+
+.info-box p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #004aad, #cb6ce6);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* === ETKİNLİK KARTLARI === */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+}
+
+.event-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.event-info {
+  padding: 15px;
+}
+
+.event-info h4 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.event-info p {
+  color: #004aad;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.btn-small {
+  background: linear-gradient(90deg, #004aad, #cb6ce6);
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.btn-small:hover {
+  opacity: 0.9;
+}
+
+/* === YENİ ETKİNLİK FORMU === */
+.event-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 20px;
+  margin-top: 30px;
+}
+
+.event-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-form .form-group label {
+  font-weight: 600;
+  color: #004aad;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.event-form input,
+.event-form select,
+.event-form textarea {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  color: #333;
+  transition: 0.3s ease;
+}
+
+.event-form input:focus,
+.event-form select:focus,
+.event-form textarea:focus {
+  outline: none;
+  border-color: #cb6ce6;
+  box-shadow: 0 0 8px rgba(203, 108, 230, 0.3);
+}
+
+/* === TEK SATIR ALANLAR === */
+.event-form .form-group.full {
+  grid-column: span 2;
+}
+
+/* === BUTON === */
+.event-form .btn {
+  grid-column: span 2;
+  justify-self: center;
+  background: linear-gradient(90deg, #004aad, #cb6ce6);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.event-form .btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* === SÖZLEŞME KUTUSU === */
+.agreement {
+  grid-column: span 2;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.agreement input[type="checkbox"] {
+  margin-top: 3px;
+  width: 18px;
+  height: 18px;
+  accent-color: #004aad;
+  cursor: pointer;
+}
+
+.agreement a {
+  color: #cb6ce6;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.agreement a:hover {
+  color: #004aad;
+}
+/* === MESAJLAR ALANI === */
+.messages-wrapper {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+  height: 650px;
+}
+
+.conversation-list {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.conversation.search-box input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.conversation-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.conversation-item:hover,
+.conversation-item.active {
+  background: linear-gradient(90deg, #cb6ce6, #004aad);
+  color: #fff;
+}
+
+.conversation-item .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.conv-info h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.conv-info p {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+
+.conversation-item .time {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* === CHAT ALANI === */
+.chat-area {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.chat-header {
+  background: linear-gradient(90deg, #004aad, #cb6ce6);
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 15px 15px 0 0;
+}
+
+.chat-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.chat-header p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* === MESAJ GÖVDE === */
+.chat-body {
+  flex: 1;
+  padding: 20px 25px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message {
+  max-width: 70%;
+  padding: 12px 15px;
+  border-radius: 15px;
+  font-size: 14px;
+  line-height: 1.4;
+  position: relative;
+}
+
+.message.incoming {
+  background: #fff;
+  align-self: flex-start;
+  border: 1px solid #eee;
+}
+
+.message.outgoing {
+  background: linear-gradient(90deg, #cb6ce6, #004aad);
+  color: #fff;
+  align-self: flex-end;
+}
+
+.message .time {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  opacity: 0.7;
+  text-align: right;
+}
+
+/* === CHAT FOOTER === */
+.chat-footer {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding: 12px 20px;
+  gap: 10px;
+  background: rgba(255,255,255,0.8);
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.chat-footer .send-btn {
+  background: linear-gradient(90deg, #004aad, #cb6ce6);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.chat-footer .send-btn:hover {
+  opacity: 0.9;
+}
+.alert-success {
+  background: #e7ffe7;
+  color: #056105;
+  border: 1px solid #a3e6a3;
+  padding: 12px 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+
+/* === RESPONSIVE === */
+@media (max-width: 992px) {
+  .messages-wrapper {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .conversation-list {
+    max-height: 250px;
+  }
+}
+
+
+/* === RESPONSIVE === */
+@media (max-width: 992px) {
+  .dashboard-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-sidebar {
+    margin-bottom: 25px;
+  }
+
+  .dashboard-content {
+    padding: 25px;
+  }
+
+  .event-form {
+    grid-template-columns: 1fr;
+  }
+
+  .event-form .btn {
+    grid-column: span 1;
+  }
+
+  .agreement {
+    flex-direction: column;
+  }
+}
+.profile-edit-form {
+
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.profile-edit-form .form-group {
+  margin-bottom: 20px;
+}
+
+.profile-edit-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.profile-edit-form input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+}
+
+.avatar-preview {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.my-tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Kart tasarımı */
+.ticket-card-min {
+  max-width: 360px;
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 24px 22px 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.07);
+  margin: 0 auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.ticket-title-min {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 18px;
+}
+
+.ticket-top-min {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.ticket-qr-wrap-min {
+  width: 96px;
+  height: 96px;
+  border-radius: 18px;
+  background: #f5f5f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ticket-qr-wrap-min img {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.ticket-name-main-min {
+  flex: 1;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.ticket-info-min {
+  padding-top: 6px;
+  padding-bottom: 10px;
+  border-top: 1px solid #f1f1f3;
+  border-bottom: 1px solid #f1f1f3;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.ticket-info-min .row {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+}
+
+.ticket-info-min .label {
+  color: #7a7a7a;
+}
+
+.ticket-info-min .value {
+  font-weight: 500;
+}
+
+.ticket-name-bottom-min {
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 600;
+}

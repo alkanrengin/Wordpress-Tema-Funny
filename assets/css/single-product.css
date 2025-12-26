@@ -1,0 +1,365 @@
+:root {
+  --mavi: #004aad;
+  --mor: #cb6ce6;
+  --beyaz: #ffffff;
+  --gri: #f8f9fa;
+  --siyah: #000000;
+}
+
+/* === GENEL ARKA PLAN === */
+body.single-product {
+  background: linear-gradient(135deg, #dbe9ff 0%, #f5e2ff 100%);
+  font-family: "Poppins", sans-serif;
+  color: #000;
+}
+
+/* === KAPSAYICI === */
+.single-event .container {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch; /* her iki sütun aynı hizaya gelsin */
+  min-height: 480px;
+}
+
+/* === GÖRSEL === */
+.event-hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.event-hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+/* === CAM EFEKT KART === */
+.event-info-card {
+  position: relative;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(203, 108, 230, 0.18),
+    rgba(0, 74, 173, 0.18)
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.event-info-card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* === BAŞLIK === */
+.event-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+/* === META KUTULAR === */
+.event-meta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  gap: 12px;
+}
+
+.meta-box {
+  flex: 1 1 30%;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  padding: 15px 20px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+
+.meta-box span {
+  color: var(--mavi);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.meta-box p {
+  margin-top: 6px;
+  font-size: 15px;
+  color: #222;
+}
+
+/* === FİYAT === */
+.event-price {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--mor);
+  margin-bottom: 20px;
+}
+
+/* === BUTONLAR === */
+.event-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.single_add_to_cart_button, .disabled-btn {
+  width: 100%;
+  background: linear-gradient(90deg, var(--mavi), var(--mor));
+  color: #fff !important;
+  font-weight: 600;
+  border-radius: 12px !important;
+  padding: 14px 20px !important;
+  border: none !important;
+  cursor: pointer;
+  text-transform: none !important;
+  transition: 0.3s ease;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.single_add_to_cart_button:hover, .disabled-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.ask-btn {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: 500;
+  display: block;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.ask-btn:hover {
+  background: var(--mor);
+}
+
+/* === AÇIKLAMA === */
+.event-description {
+  grid-column: span 2;
+  margin-top: 60px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.25),
+    rgba(203, 108, 230, 0.15),
+    rgba(0, 74, 173, 0.15)
+  );
+  border-radius: 22px;
+  padding: 40px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.event-description h2 {
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.event-description .desc-text {
+  color: #333;
+  line-height: 1.7;
+}
+
+/* === HARİTA === */
+.event-location {
+  grid-column: span 2;
+  margin-top: 50px;
+}
+
+.event-location h2 {
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  border-radius: 15px;
+  height: 350px;
+  border: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 992px) {
+  .single-event .container {
+    grid-template-columns: 1fr;
+  }
+
+  .event-info-card {
+    padding: 25px;
+  }
+
+  .event-title {
+    font-size: 26px;
+  }
+
+  .event-hero img {
+    height: auto;
+    max-height: 400px;
+  }
+}
+/* === ADET KUTUSUNU (QUANTITY) KALDIR === */
+form.cart .quantity {
+  display: none !important;
+}
+/* === ETKİNLİK KONUMU (HARİTA) === */
+.event-location {
+  grid-column: span 2;
+  margin-top: 80px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.25),
+    rgba(203, 108, 230, 0.15),
+    rgba(0, 74, 173, 0.15)
+  );
+  border-radius: 22px;
+  padding: 40px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.event-location h2 {
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.map-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 380px;
+  border: none;
+  display: block;
+  border-radius: 16px;
+}
+
+/* === Responsive (Mobil) === */
+@media (max-width: 992px) {
+  .event-location {
+    margin-top: 60px;
+    padding: 25px;
+  }
+
+  .map-wrapper iframe {
+    height: 300px;
+  }
+}
+/* === BREADCRUMB === */
+.funny-breadcrumb {
+  margin: 40px auto -20px auto;
+  max-width: 1200px;
+  padding: 14px 24px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-size: 15px;
+  color: #333;
+}
+
+.funny-breadcrumb a {
+  color: var(--mavi);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.funny-breadcrumb a:hover {
+  color: var(--mor);
+}
+
+.funny-breadcrumb .divider {
+  margin: 0 8px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.funny-breadcrumb .current {
+  color: #000;
+  font-weight: 600;
+}
+.ticket-card-min {
+  max-width: 360px;
+  background: #fff;
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  margin: 30px auto;
+  font-family: "Poppins", sans-serif;
+}
+.ticket-title-min {font-size:20px;font-weight:600;text-align:center;margin-bottom:14px;}
+.ticket-top-min {display:flex;align-items:center;gap:16px;margin-bottom:12px;}
+.ticket-qr-wrap-min img {width:80px;height:80px;}
+.ticket-info-min .row {display:flex;justify-content:space-between;margin:3px 0;font-size:14px;}
+.ticket-info-min .label {color:#777;}
+.ticket-info-min .value {font-weight:500;}
+.ticket-name-bottom-min {margin-top:6px;text-align:center;font-weight:600;}
+.ticket-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket-modal.is-open {
+  display: flex;
+}
+
+.ticket-wrapper {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  position: relative;
+  max-width: 400px;
+  width: 90%;
+}
+
+.ticket-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: #f4f4f4;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}

@@ -1,0 +1,176 @@
+/* === GENEL SAYFA === */
+body.login-page {
+  margin: 0;
+  background: linear-gradient(135deg, #cb6ce6, #004aad);
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* === LOGIN KUTUSU === */
+.login-container {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.15);
+  padding: 55px 70px;
+  width: 480px; /* 🔹 daha geniş */
+  max-width: 95%;
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* === LOGO & BAŞLIK === */
+.logo{
+  text-align: center;
+  justify-content: center;
+}
+.login-logo img {
+  width: 70px;
+  margin-bottom: 10px;
+}
+
+.login-logo h2 {
+  color: #004aad;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.3px;
+}
+
+/* === TABLAR === */
+.login-tabs {
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  background: #f2f2f2;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 14px;
+  font-weight: 600;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #333;
+  font-size: 15px;
+}
+
+.tab-btn.active {
+  background: linear-gradient(90deg, #cb6ce6, #004aad);
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* === GİRİŞ ALANLARI === */
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  transition: 0.3s;
+  border: 1px solid transparent;
+}
+
+.input-group:focus-within {
+  border-color: #cb6ce6;
+  background: #fff;
+}
+
+.input-group i {
+  color: #777;
+  margin-right: 10px;
+  font-size: 17px;
+}
+
+.input-group input {
+  border: none;
+  background: none;
+  flex: 1;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+}
+
+/* === HATA MESAJI === */
+.login-error {
+  background: #ffe5e5;
+  color: #c20000;
+  border: 1px solid #ffbfbf;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/* === ŞİFREMİ UNUTTUM === */
+.forgot {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  color: #004aad;
+  margin-bottom: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.forgot:hover {
+  color: #cb6ce6;
+}
+
+/* === GİRİŞ BUTONU === */
+.btn-login {
+  width: 100%;
+  border: none;
+  background: linear-gradient(90deg, #cb6ce6, #004aad);
+  color: #fff;
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.btn-login:hover {
+  opacity: 0.95;
+  transform: translateY(-2px);
+}
+
+/* === TABLARIN İÇERİĞİ === */
+.tab-content {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    padding: 40px 30px;
+  }
+  .tab-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+}

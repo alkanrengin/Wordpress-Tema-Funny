@@ -1,0 +1,161 @@
+/* === GENEL === */
+body.register-page {
+  background: linear-gradient(135deg, #cb6ce6, #004aad);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+/* === KART === */
+.register-container {
+  background: #fff;
+  border-radius: 25px;
+  padding: 50px 60px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.register-logo img {
+  width: 140px;
+  margin-bottom: 10px;
+  object-fit: scale-down;
+}
+
+.register-logo h2 {
+  color: #004aad;
+  font-weight: 600;
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+/* === SEKMELER === */
+.register-tabs {
+  display: flex;
+  justify-content: center;
+  background: #f5f5f5;
+  border-radius: 50px;
+  padding: 4px;
+  margin-bottom: 35px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.tab-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  padding: 10px 0;
+  transition: 0.3s ease;
+}
+
+.tab-btn.active {
+  background: linear-gradient(90deg, #cb6ce6, #004aad);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* === FORM === */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #004aad;
+  box-shadow: 0 0 0 2px rgba(0, 74, 173, 0.1);
+}
+
+/* === DOSYA YÜKLEME === */
+.file-upload label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+/* === CHECKBOX === */
+.checkbox {
+  font-size: 13px;
+  color: #333;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+/* === BUTON === */
+.btn-register {
+  background: linear-gradient(90deg, #004aad, #cb6ce6);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-register:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* === GİZLE-GÖSTER === */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 480px) {
+  .register-container {
+    padding: 35px 25px;
+    max-width: 90%;
+  }
+
+  .register-logo img {
+    width: 120px;
+  }
+
+  .btn-register {
+    font-size: 14px;
+  }
+}

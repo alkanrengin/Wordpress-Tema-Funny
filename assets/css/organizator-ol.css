@@ -1,0 +1,156 @@
+:root {
+  --mavi: #004aad;
+  --mor: #cb6ce6;
+  --beyaz: #fff;
+  --gri: #f8f9fa;
+}
+
+/* === HERO === */
+.org-hero {
+  background: linear-gradient(135deg, var(--mavi), var(--mor));
+  color: var(--beyaz);
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.org-hero h1 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.org-hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* === SECTIONS === */
+.org-why, .org-forwho, .org-how, .org-commission, .org-support {
+  text-align: center;
+  margin: 80px auto;
+  max-width: 1100px;
+  padding: 0 20px;
+}
+.org-why h2, .org-forwho h2, .org-how h2, .org-commission h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, var(--mavi), var(--mor));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* === BENEFITS === */
+.org-benefits, .org-groups, .steps {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+}
+.org-benefits {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.benefit {
+  background: var(--beyaz);
+  border-radius: 14px;
+  padding: 30px 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+}
+.benefit:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.benefit i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: var(--mor);
+  display: block;
+}
+
+/* === GROUPS === */
+.org-groups {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.group {
+  background: var(--gri);
+  border-radius: 12px;
+  padding: 25px;
+  font-weight: 500;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+.group:hover {
+  background: linear-gradient(135deg, var(--mor), var(--mavi));
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* === STEPS === */
+.steps {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: start;
+}
+.step {
+  background: var(--beyaz);
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 5px 14px rgba(0,0,0,0.05);
+}
+.step span {
+  display: inline-block;
+  background: var(--mor);
+  color: #fff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* === COMMISSION === */
+.org-commission .commission-box {
+  background: #f0e8ff;
+  border-radius: 16px;
+  padding: 30px 40px;
+  display: inline-block;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  line-height: 1.6;
+}
+
+/* === SUPPORT === */
+.org-support {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+.org-support h3 {
+  font-size: 1.3rem;
+  color: var(--mavi);
+  margin-bottom: 10px;
+}
+.org-support p {
+  color: #444;
+}
+
+/* === CTA === */
+.org-cta {
+  text-align: center;
+  margin: 100px 0;
+}
+.org-cta .btn {
+  background: linear-gradient(90deg, var(--mavi), var(--mor));
+  color: #fff;
+  padding: 18px 48px;
+  border-radius: 50px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+.org-cta .btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}

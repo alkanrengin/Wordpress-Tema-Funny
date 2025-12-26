@@ -1,0 +1,87 @@
+.forgot-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #f5e9ff, #e7f0ff);
+  font-family: "Poppins", sans-serif;
+}
+
+.forgot-container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.register-logo img {
+  width: 330px;
+  margin-bottom: 10px;
+  object-fit: scale-down;
+}
+
+.register-logo h2 {
+  font-size: 22px;
+  color: #004aad;
+  margin-bottom: 5px;
+}
+
+.register-logo p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.btn-register {
+  width: 100%;
+  background: linear-gradient(90deg, #004aad, #cb6ce6);
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-register:hover {
+  opacity: 0.9;
+}
+
+.success-msg {
+  color: #2e8b57;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.error-msg {
+  color: #c0392b;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.forgot-links {
+  margin-top: 20px;
+}
+
+.forgot-links a {
+  font-size: 14px;
+  color: #004aad;
+  text-decoration: none;
+}

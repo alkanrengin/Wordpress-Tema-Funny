@@ -1,0 +1,314 @@
+/* === GENEL === */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #cb6ce6, #004aad);
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+.container {
+  max-width: 950px;
+  margin: 60px auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cart-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+/* === SEPET KARTLARI === */
+.cart-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cart-item-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.cart-item-left img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.cart-item-info h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #111;
+}
+
+.cart-item-info p {
+  margin: 5px 0 0;
+  color: #555;
+  font-size: 14px;
+}
+
+/* === SAĞ TARAF === */
+.cart-item-right {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.cart-price,
+.cart-total {
+  font-weight: 600;
+  color: #000;
+}
+
+.cart-quantity input.qty {
+  width: 45px;
+  height: 38px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.update-btn {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  color: #004aad;
+  transition: 0.2s ease;
+}
+
+.update-btn:hover {
+  transform: rotate(90deg);
+}
+
+/* === ALT KISIM === */
+.cart-summary {
+  text-align: right;
+  border-top: 1px solid #eee;
+  padding-top: 25px;
+  margin-top: 20px;
+}
+
+.cart-summary h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.checkout-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #cb6ce6, #004aad);
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.checkout-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* === BOŞ SEPET === */
+.empty-cart {
+  text-align: center;
+  padding: 60px 0;
+  font-size: 18px;
+  color: #555;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .cart-item-right {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .cart-summary {
+    text-align: center;
+  }
+
+  .checkout-btn {
+    width: 100%;
+    display: block;
+  }
+}
+/* === SEPET GÖRÜNÜMÜ DÜZENLEME === */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px 25px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+}
+
+.cart-item-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart-item-left img {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.cart-item-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+}
+
+.cart-item-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.cart-price,
+.cart-total {
+  font-weight: 600;
+  color: #111;
+  font-size: 16px;
+}
+
+/* === ADET KUTUSU === */
+.qty-box {
+  display: flex;
+  align-items: center;
+  background: #f7f7f7;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.qty-box button.qty-btn {
+  background: var(--mavi);
+  color: #fff;
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.qty-box button.qty-btn:hover {
+  background: var(--mor);
+}
+
+.qty-box input.qty {
+  width: 45px;
+  height: 36px;
+  text-align: center;
+  border: none;
+  background: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+}
+
+/* === SİL BUTONU === */
+.remove-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #888;
+  transition: 0.3s;
+}
+
+.remove-btn:hover {
+  color: #e74c3c;
+  transform: scale(1.15);
+}
+
+/* === TOPLAM VE BUTON === */
+.cart-summary {
+  text-align: right;
+  margin-top: 40px;
+}
+
+.cart-summary h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+}
+.cart-quantity{
+  display: flex;
+}
+
+.checkout-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--mor), var(--mavi));
+  color: #fff;
+  padding: 14px 34px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.checkout-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .cart-item-right {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cart-summary {
+    text-align: center;
+  }
+}

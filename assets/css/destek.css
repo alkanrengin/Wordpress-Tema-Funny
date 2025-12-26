@@ -1,0 +1,60 @@
+.support-page {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.support-hero h1 {
+  font-size: 2rem;
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+.support-hero p {
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.support-content {
+  display: grid;
+  gap: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.support-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+}
+
+.support-card.alt {
+  background: #f9fafc;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background: #20b558;
+}
+
+.email-link {
+  color: #004aad;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.note {
+  color: #777;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
